@@ -34,6 +34,7 @@ public class BaseApiServiceWebApplication {
 		properties.setProperty("pageSizeZero","true");//如果<0，显示第一页数据
 		properties.setProperty("dialect","mysql");    //配置mysql数据库的方言
 		pageHelper.setProperties(properties);
+
 		return pageHelper;
 	}
 }
