@@ -1,0 +1,1272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="base-api-service-web:war" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="55dce388-bb41-4a9c-a60f-45571f210f64" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/base-api-service-web/src/main/resources/static/hello.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/base_api_service_web_war.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/base_api_service_web_war.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/base_api_service_web_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/base_api_service_web_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-api-service-api/src/main/java/top/tsama/baseapiserviceapi/ExpertService.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-api-service-api/src/main/java/top/tsama/baseapiserviceapi/ExpertService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-api-service-api/src/main/java/top/tsama/baseapiserviceapi/HomeDataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-api-service-api/src/main/java/top/tsama/baseapiserviceapi/HomeDataService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-api-service-api/src/main/java/top/tsama/baseapiserviceapi/NewsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-api-service-api/src/main/java/top/tsama/baseapiserviceapi/NewsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-api-service-api/src/main/java/top/tsama/baseapiserviceapi/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-api-service-api/src/main/java/top/tsama/baseapiserviceapi/StudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-api-service-common/base-api-service-common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/base-api-service-common/base-api-service-common.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-api-service-common/src/main/java/top/tsama/baseapiservicecommon/ActionUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-api-service-common/src/main/java/top/tsama/baseapiservicecommon/ActionUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-api-service-common/src/main/java/top/tsama/baseapiservicecommon/Pagination.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-api-service-common/src/main/java/top/tsama/baseapiservicecommon/Pagination.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-api-service-dao/src/main/java/top/tsama/baseapiservicedao/mapper/CommentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-api-service-dao/src/main/java/top/tsama/baseapiservicedao/mapper/CommentMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-api-service-dao/src/main/java/top/tsama/baseapiservicedao/mapper/CommentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/base-api-service-dao/src/main/java/top/tsama/baseapiservicedao/mapper/CommentMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-api-service-dao/src/main/java/top/tsama/baseapiservicedao/mapper/CourseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-api-service-dao/src/main/java/top/tsama/baseapiservicedao/mapper/CourseMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-api-service-dao/src/main/java/top/tsama/baseapiservicedao/mapper/CourseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/base-api-service-dao/src/main/java/top/tsama/baseapiservicedao/mapper/CourseMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-api-service-dao/src/main/java/top/tsama/baseapiservicedao/mapper/ExpertsinfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-api-service-dao/src/main/java/top/tsama/baseapiservicedao/mapper/ExpertsinfoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-api-service-dao/src/main/java/top/tsama/baseapiservicedao/mapper/ExpertsinfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/base-api-service-dao/src/main/java/top/tsama/baseapiservicedao/mapper/ExpertsinfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-api-service-dao/src/main/java/top/tsama/baseapiservicedao/mapper/NewsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-api-service-dao/src/main/java/top/tsama/baseapiservicedao/mapper/NewsMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-api-service-dao/src/main/java/top/tsama/baseapiservicedao/mapper/NewsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/base-api-service-dao/src/main/java/top/tsama/baseapiservicedao/mapper/NewsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-api-service-dao/src/main/java/top/tsama/baseapiservicedao/mapper/StudentsinfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-api-service-dao/src/main/java/top/tsama/baseapiservicedao/mapper/StudentsinfoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-api-service-dao/src/main/java/top/tsama/baseapiservicedao/mapper/StudentsinfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/base-api-service-dao/src/main/java/top/tsama/baseapiservicedao/mapper/StudentsinfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-api-service-dao/src/main/java/top/tsama/baseapiservicedao/mapper/SysDictionaryMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-api-service-dao/src/main/java/top/tsama/baseapiservicedao/mapper/SysDictionaryMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-api-service-dao/src/main/java/top/tsama/baseapiservicedao/mapper/SysDictionaryMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/base-api-service-dao/src/main/java/top/tsama/baseapiservicedao/mapper/SysDictionaryMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-api-service-domain/src/main/java/top/tsama/baseapiservicedomain/model/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-api-service-domain/src/main/java/top/tsama/baseapiservicedomain/model/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-api-service-domain/src/main/java/top/tsama/baseapiservicedomain/model/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-api-service-domain/src/main/java/top/tsama/baseapiservicedomain/model/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-api-service-domain/src/main/java/top/tsama/baseapiservicedomain/model/ExpertsVoinfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-api-service-domain/src/main/java/top/tsama/baseapiservicedomain/model/ExpertsVoinfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-api-service-domain/src/main/java/top/tsama/baseapiservicedomain/model/Expertsinfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-api-service-domain/src/main/java/top/tsama/baseapiservicedomain/model/Expertsinfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-api-service-domain/src/main/java/top/tsama/baseapiservicedomain/model/HomeData.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-api-service-domain/src/main/java/top/tsama/baseapiservicedomain/model/HomeData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-api-service-domain/src/main/java/top/tsama/baseapiservicedomain/model/News.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-api-service-domain/src/main/java/top/tsama/baseapiservicedomain/model/News.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-api-service-domain/src/main/java/top/tsama/baseapiservicedomain/model/Studentsinfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-api-service-domain/src/main/java/top/tsama/baseapiservicedomain/model/Studentsinfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-api-service-services/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/base-api-service-services/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-api-service-services/src/main/java/top/tsama/baseapiserviceservices/ExpertServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-api-service-services/src/main/java/top/tsama/baseapiserviceservices/ExpertServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-api-service-services/src/main/java/top/tsama/baseapiserviceservices/HomeDataServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-api-service-services/src/main/java/top/tsama/baseapiserviceservices/HomeDataServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-api-service-services/src/main/java/top/tsama/baseapiserviceservices/LoginRegisterServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-api-service-services/src/main/java/top/tsama/baseapiserviceservices/LoginRegisterServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-api-service-services/src/main/java/top/tsama/baseapiserviceservices/NewsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-api-service-services/src/main/java/top/tsama/baseapiserviceservices/NewsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-api-service-services/src/main/java/top/tsama/baseapiserviceservices/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-api-service-services/src/main/java/top/tsama/baseapiserviceservices/StudentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-api-service-web/src/main/java/top/tsama/baseapiserviceweb/BaseApiServiceWebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-api-service-web/src/main/java/top/tsama/baseapiserviceweb/BaseApiServiceWebApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-api-service-web/src/main/java/top/tsama/baseapiserviceweb/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-api-service-web/src/main/java/top/tsama/baseapiserviceweb/controller/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-api-service-web/src/main/java/top/tsama/baseapiserviceweb/controller/ExpertController.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-api-service-web/src/main/java/top/tsama/baseapiserviceweb/controller/ExpertController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-api-service-web/src/main/java/top/tsama/baseapiserviceweb/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-api-service-web/src/main/java/top/tsama/baseapiserviceweb/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-api-service-web/src/main/java/top/tsama/baseapiserviceweb/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-api-service-web/src/main/java/top/tsama/baseapiserviceweb/controller/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-api-service-web/src/main/java/top/tsama/baseapiserviceweb/controller/LoginRegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-api-service-web/src/main/java/top/tsama/baseapiserviceweb/controller/LoginRegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-api-service-web/src/main/java/top/tsama/baseapiserviceweb/controller/NewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-api-service-web/src/main/java/top/tsama/baseapiserviceweb/controller/NewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-api-service-web/src/main/java/top/tsama/baseapiserviceweb/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-api-service-web/src/main/java/top/tsama/baseapiserviceweb/controller/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-api-service-web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/base-api-service-web/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-api-service-web/src/main/resources/generator/mybatisGeneratorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/base-api-service-web/src/main/resources/generator/mybatisGeneratorConfig.xml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/base-api-service-common/target/" />
+    <ignored path="$PROJECT_DIR$/base-api-service-api/target/" />
+    <ignored path="$PROJECT_DIR$/base-api-service-domain/target/" />
+    <ignored path="$PROJECT_DIR$/base-api-service-web/target/" />
+    <ignored path="$PROJECT_DIR$/base-api-service-rpc/target/" />
+    <ignored path="$PROJECT_DIR$/base-api-service-services/target/" />
+    <ignored path="$PROJECT_DIR$/base-api-service-dao/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/base-api-service-web/src/main/java/top/tsama/baseapiserviceweb/controller/LoginRegisterController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="629">
+              <caret line="51" column="59" selection-start-line="51" selection-start-column="59" selection-end-line="51" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/base-api-service-domain/src/main/java/top/tsama/baseapiservicedomain/model/Studentsinfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/base-api-service-domain/src/main/java/top/tsama/baseapiservicedomain/model/Comment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/base-api-service-domain/src/main/java/top/tsama/baseapiservicedomain/model/CommentDetail.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/base-api-service-domain/src/main/java/top/tsama/baseapiservicedomain/model/Course.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/base-api-service-domain/src/main/java/top/tsama/baseapiservicedomain/model/CourseComment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/base-api-service-domain/src/main/java/top/tsama/baseapiservicedomain/model/CourseVo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/base-api-service-domain/src/main/java/top/tsama/baseapiservicedomain/model/Enlist.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/base-api-service-domain/src/main/java/top/tsama/baseapiservicedomain/model/EnlistVoinfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/base-api-service-web/src/main/resources/generator/mybatisGeneratorConfig.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>getCourse</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/base-api-service-dao/src/main/java/top/tsama/baseapiservicedao/mapper/StudentsinfoMapper.java" />
+        <option value="$PROJECT_DIR$/base-api-service-api/src/main/java/top/tsama/baseapiserviceapi/StudentService.java" />
+        <option value="$PROJECT_DIR$/base-api-service-services/src/main/java/top/tsama/baseapiserviceservices/StudentServiceImpl.java" />
+        <option value="$PROJECT_DIR$/base-api-service-domain/src/main/java/top/tsama/baseapiservicedomain/model/News.java" />
+        <option value="$PROJECT_DIR$/base-api-service-web/src/main/resources/generator/mybatisGeneratorConfig.xml" />
+        <option value="$PROJECT_DIR$/base-api-service-domain/src/main/java/top/tsama/baseapiservicedomain/model/Backgroudinfo.java" />
+        <option value="$PROJECT_DIR$/base-api-service-dao/src/main/java/top/tsama/baseapiservicedao/mapper/BackgroudinfoMapper.xml" />
+        <option value="$PROJECT_DIR$/base-api-service-dao/src/main/java/top/tsama/baseapiservicedao/mapper/NewsMapper.java" />
+        <option value="$PROJECT_DIR$/base-api-service-dao/src/main/java/top/tsama/baseapiservicedao/mapper/ExpertsinfoMapper.java" />
+        <option value="$PROJECT_DIR$/base-api-service-api/src/main/java/top/tsama/baseapiserviceapi/HomeDataService.java" />
+        <option value="$PROJECT_DIR$/base-api-service-common/src/main/java/top/tsama/baseapiservicecommon/Pagination.java" />
+        <option value="$PROJECT_DIR$/base-api-service-services/src/main/java/top/tsama/baseapiserviceservices/HomeDataServiceImpl.java" />
+        <option value="$PROJECT_DIR$/base-api-service-domain/src/main/java/top/tsama/baseapiservicedomain/model/ExpertsVoinfo.java" />
+        <option value="$PROJECT_DIR$/base-api-service-domain/src/main/java/top/tsama/baseapiservicedomain/model/Course.java" />
+        <option value="$PROJECT_DIR$/base-api-service-dao/src/main/java/top/tsama/baseapiservicedao/mapper/CourseMapper.java" />
+        <option value="$PROJECT_DIR$/base-api-service-domain/src/main/java/top/tsama/baseapiservicedomain/model/CourseVo.java" />
+        <option value="$PROJECT_DIR$/base-api-service-api/src/main/java/top/tsama/baseapiserviceapi/CourseService.java" />
+        <option value="$PROJECT_DIR$/base-api-service-dao/src/main/java/top/tsama/baseapiservicedao/mapper/SysDictionaryMapper.xml" />
+        <option value="$PROJECT_DIR$/base-api-service-dao/src/main/java/top/tsama/baseapiservicedao/mapper/SysDictionaryMapper.java" />
+        <option value="$PROJECT_DIR$/base-api-service-api/src/main/java/top/tsama/baseapiserviceapi/SysDictonaryService.java" />
+        <option value="$PROJECT_DIR$/base-api-service-services/src/main/java/top/tsama/baseapiserviceservices/SysDictionaryServiceImpl.java" />
+        <option value="$PROJECT_DIR$/base-api-service-web/src/main/java/top/tsama/baseapiserviceweb/controller/SysDictionaryController.java" />
+        <option value="$PROJECT_DIR$/base-api-service-dao/src/main/java/top/tsama/baseapiservicedao/mapper/EnlistMapper.xml" />
+        <option value="$PROJECT_DIR$/base-api-service-domain/src/main/java/top/tsama/baseapiservicedomain/model/Studentsinfo.java" />
+        <option value="$PROJECT_DIR$/base-api-service-dao/src/main/java/top/tsama/baseapiservicedao/mapper/StudentsinfoMapper.xml" />
+        <option value="$PROJECT_DIR$/base-api-service-web/src/main/java/top/tsama/baseapiserviceweb/controller/HomeController.java" />
+        <option value="$PROJECT_DIR$/base-api-service-common/src/main/java/top/tsama/baseapiservicecommon/ActionUtil.java" />
+        <option value="$PROJECT_DIR$/base-api-service-dao/src/main/java/top/tsama/baseapiservicedao/mapper/CourseMapper.xml" />
+        <option value="$PROJECT_DIR$/base-api-service-services/src/main/java/top/tsama/baseapiserviceservices/CourseServiceImpl.java" />
+        <option value="$PROJECT_DIR$/base-api-service-dao/src/main/java/top/tsama/baseapiservicedao/mapper/NewsMapper.xml" />
+        <option value="$PROJECT_DIR$/base-api-service-dao/src/main/java/top/tsama/baseapiservicedao/mapper/ExpertsinfoMapper.xml" />
+        <option value="$PROJECT_DIR$/base-api-service-api/src/main/java/top/tsama/baseapiserviceapi/NewsService.java" />
+        <option value="$PROJECT_DIR$/base-api-service-services/src/main/java/top/tsama/baseapiserviceservices/NewsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/base-api-service-web/src/main/java/top/tsama/baseapiserviceweb/controller/NewController.java" />
+        <option value="$PROJECT_DIR$/base-api-service-api/src/main/java/top/tsama/baseapiserviceapi/ExpertService.java" />
+        <option value="$PROJECT_DIR$/base-api-service-services/src/main/java/top/tsama/baseapiserviceservices/ExpertServiceImpl.java" />
+        <option value="$PROJECT_DIR$/base-api-service-web/src/main/java/top/tsama/baseapiserviceweb/controller/ExpertController.java" />
+        <option value="$PROJECT_DIR$/base-api-service-web/src/test/java/top/tsama/baseapiserviceweb/NewsTest.java" />
+        <option value="$PROJECT_DIR$/base-api-service-web/src/main/java/top/tsama/baseapiserviceweb/controller/CommentController.java" />
+        <option value="$PROJECT_DIR$/base-api-service-web/src/main/java/top/tsama/baseapiserviceweb/controller/StudentController.java" />
+        <option value="$PROJECT_DIR$/base-api-service-web/src/main/java/top/tsama/baseapiserviceweb/BaseApiServiceWebApplication.java" />
+        <option value="$PROJECT_DIR$/base-api-service-web/src/main/resources/static/hello.html" />
+        <option value="$PROJECT_DIR$/base-api-service-web/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/base-api-service-web/src/main/java/top/tsama/baseapiserviceweb/controller/IndexController.java" />
+        <option value="$PROJECT_DIR$/base-api-service-web/src/main/java/top/tsama/baseapiserviceweb/config/AccessFilter.java" />
+        <option value="$PROJECT_DIR$/base-api-service-services/src/main/java/top/tsama/baseapiserviceservices/LoginRegisterServiceImpl.java" />
+        <option value="$PROJECT_DIR$/base-api-service-web/src/main/java/top/tsama/baseapiserviceweb/controller/LoginRegisterController.java" />
+      </list>
+    </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/Coding environment/apache-maven-3.6.0" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="base-api-service-web" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Lifecycle" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="base" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Lifecycle" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
+        </PATH_ELEMENT>
+      </PATH>
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-224" />
+    <option name="y" value="45" />
+    <option name="width" value="1385" />
+    <option name="height" value="745" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>CodeSpring CoreSpring</id>
+          </State>
+          <State>
+            <id>Spring</id>
+          </State>
+          <State>
+            <id>Spring CoreSpring</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>SpringJavaAutowiringInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="base_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="base_app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="base_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="base_app" type="462c0819:PsiDirectoryNode" />
+              <item name="base-api-service-domain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="base_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="base_app" type="462c0819:PsiDirectoryNode" />
+              <item name="base-api-service-domain" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="base_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="base_app" type="462c0819:PsiDirectoryNode" />
+              <item name="base-api-service-domain" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="base_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="base_app" type="462c0819:PsiDirectoryNode" />
+              <item name="base-api-service-domain" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="base_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="base_app" type="462c0819:PsiDirectoryNode" />
+              <item name="base-api-service-domain" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="base_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="base_app" type="462c0819:PsiDirectoryNode" />
+              <item name="base-api-service-services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="base_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="base_app" type="462c0819:PsiDirectoryNode" />
+              <item name="base-api-service-services" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="base_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="base_app" type="462c0819:PsiDirectoryNode" />
+              <item name="base-api-service-services" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="base_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="base_app" type="462c0819:PsiDirectoryNode" />
+              <item name="base-api-service-services" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="base_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="base_app" type="462c0819:PsiDirectoryNode" />
+              <item name="base-api-service-web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="base_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="base_app" type="462c0819:PsiDirectoryNode" />
+              <item name="base-api-service-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="base_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="base_app" type="462c0819:PsiDirectoryNode" />
+              <item name="base-api-service-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="base_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="base_app" type="462c0819:PsiDirectoryNode" />
+              <item name="base-api-service-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="base_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="base_app" type="462c0819:PsiDirectoryNode" />
+              <item name="base-api-service-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="baseapiserviceweb" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="base_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="base_app" type="462c0819:PsiDirectoryNode" />
+              <item name="base-api-service-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="baseapiserviceweb" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="base_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="base_app" type="462c0819:PsiDirectoryNode" />
+              <item name="base-api-service-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="baseapiserviceweb" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552632067437" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Console Font" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.BaseApiServiceWebApplication">
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MybatisGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="top.tsama.baseapiserviceweb.generator.MybatisGenerator" />
+      <module name="base-api-service-web" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="top.tsama.baseapiserviceweb.generator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="passParentEnv" value="true" />
+      <setting name="launchBrowser" value="true" />
+      <setting name="launchBrowserUrl" value="" />
+      <setting name="depsClasspath" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="NewsTest.getnews" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="base-api-service-web" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="top.tsama.baseapiserviceweb.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="top.tsama.baseapiserviceweb" />
+      <option name="MAIN_CLASS_NAME" value="top.tsama.baseapiserviceweb.NewsTest" />
+      <option name="METHOD_NAME" value="getnews" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <module name="" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BaseApiServiceWebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="base-api-service-web" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="top.tsama.baseapiserviceweb.BaseApiServiceWebApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Unnamed" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="ali-tomcat8" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="base-api-service-web:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_hss" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="58824" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="base-api-service-web:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.MybatisGenerator" />
+      <item itemvalue="JUnit.NewsTest.getnews" />
+      <item itemvalue="Spring Boot.BaseApiServiceWebApplication" />
+      <item itemvalue="Tomcat Server.Unnamed" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.NewsTest.getnews" />
+        <item itemvalue="Application.MybatisGenerator" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="55dce388-bb41-4a9c-a60f-45571f210f64" name="Default" comment="" />
+      <created>1520250938453</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1520250938453</updated>
+      <workItem from="1520250940814" duration="2167000" />
+      <workItem from="1520336426552" duration="9751000" />
+      <workItem from="1520409245089" duration="1487000" />
+      <workItem from="1520581205333" duration="2894000" />
+      <workItem from="1520584235270" duration="18576000" />
+      <workItem from="1520669524899" duration="161000" />
+      <workItem from="1521957603337" duration="418000" />
+      <workItem from="1521958093377" duration="17628000" />
+      <workItem from="1522029012573" duration="16030000" />
+      <workItem from="1522058507349" duration="1532000" />
+      <workItem from="1522072275281" duration="767000" />
+      <workItem from="1522123203791" duration="2084000" />
+      <workItem from="1522134502864" duration="1363000" />
+      <workItem from="1522214572761" duration="5044000" />
+      <workItem from="1522232021260" duration="547000" />
+      <workItem from="1522572885132" duration="2870000" />
+      <workItem from="1524561255530" duration="153000" />
+      <workItem from="1525001314328" duration="3452000" />
+      <workItem from="1525353040815" duration="223000" />
+      <workItem from="1525399393454" duration="713000" />
+      <workItem from="1525504588282" duration="1085000" />
+      <workItem from="1525759842876" duration="4409000" />
+      <workItem from="1526273075212" duration="229000" />
+      <workItem from="1527867954148" duration="1089000" />
+      <workItem from="1527919090393" duration="1712000" />
+      <workItem from="1527936169880" duration="572000" />
+      <workItem from="1531836812120" duration="1360000" />
+      <workItem from="1532140189542" duration="2030000" />
+      <workItem from="1532357952327" duration="1875000" />
+      <workItem from="1533367310442" duration="2708000" />
+      <workItem from="1547972253549" duration="1618000" />
+      <workItem from="1547949875385" duration="635000" />
+      <workItem from="1547950565583" duration="1419000" />
+      <workItem from="1552364997487" duration="21310000" />
+      <workItem from="1554486085250" duration="1841000" />
+      <workItem from="1554966187365" duration="590000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="NewsTest_getnews - 2018.07.23 at 23h 07m 15s.xml">
+      <configuration name="NewsTest.getnews" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="NewsTest_getnews - 2018.07.23 at 23h 08m 35s.xml">
+      <configuration name="NewsTest.getnews" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="132342000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14343163" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Image Layers" order="5" />
+      <window_info id="Web" order="6" side_tool="true" />
+      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info id="Nl-Palette" order="8" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.83847183" weight="0.296034" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.7657394" weight="0.62460566" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5033512" side_tool="true" visible="true" weight="0.21529745" />
+      <window_info anchor="bottom" id="Java Enterprise" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Spring" order="10" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4966488" visible="true" weight="0.21529745" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.45509383" weight="0.703966" />
+      <window_info anchor="bottom" id="Application Servers" order="13" weight="0.32962137" />
+      <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="15" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Properties" order="1" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="right" id="Maven Projects" order="4" visible="true" weight="0.01830161" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Bean Validation" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="right" id="Palette" order="10" />
+      <window_info anchor="right" id="Maven" order="11" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/base-api-service-services/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-domain/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-dao/src/main/java/top/tsama/baseapiservicedao/mapper/SysManagementMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-287" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-dao/src/main/java/top/tsama/baseapiservicedao/mapper/SysManagementMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-domain/src/main/java/top/tsama/baseapiservicedomain/model/Backgroudinfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-services/src/main/java/top/tsama/baseapiserviceservices/FileServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-domain/src/main/java/top/tsama/baseapiservicedomain/model/StudentsVoinfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-web/src/main/java/top/tsama/baseapiserviceweb/controller/EnlistController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-web/src/main/java/top/tsama/baseapiserviceweb/controller/FileController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="78" column="30" selection-start-line="78" selection-start-column="21" selection-end-line="78" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-domain/src/main/java/top/tsama/baseapiservicedomain/model/Expertsinfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-209">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-web/src/main/java/top/tsama/baseapiserviceweb/controller/NewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-192">
+          <caret line="62" column="6" lean-forward="true" selection-start-line="62" selection-start-column="6" selection-end-line="62" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-web/src/main/java/top/tsama/baseapiserviceweb/controller/StudentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2679">
+          <caret line="159" column="7" lean-forward="true" selection-start-line="159" selection-start-column="7" selection-end-line="159" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-web/src/main/java/top/tsama/baseapiserviceweb/controller/TestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-domain/src/main/java/top/tsama/baseapiservicedomain/model/SysDictionary.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="42" column="1" lean-forward="true" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-web/src/main/java/top/tsama/baseapiserviceweb/controller/SysDictionaryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-dao/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-rpc/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-web/src/main/java/top/tsama/baseapiserviceweb/config/BaseConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="5" column="16" lean-forward="true" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-common/src/main/java/top/tsama/baseapiservicecommon/StringConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-common/src/main/java/top/tsama/baseapiservicecommon/webUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2449">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-web/src/main/java/top/tsama/baseapiserviceweb/controller/ExpertController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="40" selection-start-line="40" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-common/src/main/java/top/tsama/baseapiservicecommon/ActionUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="25" column="38" lean-forward="true" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-web/src/main/java/top/tsama/baseapiserviceweb/generator/MybatisGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-web/src/main/java/top/tsama/baseapiserviceweb/ServletInitializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="5" column="60" selection-start-line="5" selection-start-column="60" selection-end-line="5" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-web/src/main/java/top/tsama/baseapiserviceweb/controller/CommentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-web/src/main/java/top/tsama/baseapiserviceweb/BaseApiServiceWebApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-112">
+          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-web/src/main/resources/static/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="19" lean-forward="true" selection-end-line="1" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-web/src/main/resources/static/hello.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-web/src/main/java/top/tsama/baseapiserviceweb/controller/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <folding>
+            <element signature="e#435#436#0" expanded="true" />
+            <element signature="e#472#473#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-web/src/main/java/top/tsama/baseapiserviceweb/controller/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2375">
+          <caret line="169" column="6" selection-start-line="169" selection-start-column="6" selection-end-line="169" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-web/src/main/java/top/tsama/baseapiserviceweb/config/AccessFilter.java" />
+    <entry file="file://$PROJECT_DIR$/base-api-service-common/src/main/java/top/tsama/baseapiservicecommon/MD5.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="45" column="21" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-dao/src/main/java/top/tsama/baseapiservicedao/mapper/StudentsinfoMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-dao/src/main/java/top/tsama/baseapiservicedao/mapper/StudentsinfoMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="85" column="9" lean-forward="true" selection-start-line="85" selection-start-column="9" selection-end-line="85" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-web/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-api/src/main/java/top/tsama/baseapiserviceapi/LoginRegisterService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-services/src/main/java/top/tsama/baseapiserviceservices/LoginRegisterServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="62" column="21" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-services/src/main/java/top/tsama/baseapiserviceservices/StudentServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="24" column="47" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-services/src/main/java/top/tsama/baseapiserviceservices/CommentServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-services/src/main/java/top/tsama/baseapiserviceservices/CourseServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-web/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="48" column="45" selection-start-line="48" selection-start-column="45" selection-end-line="48" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-web/src/main/java/top/tsama/baseapiserviceweb/controller/LoginRegisterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="51" column="59" selection-start-line="51" selection-start-column="59" selection-end-line="51" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-domain/src/main/java/top/tsama/baseapiservicedomain/model/Studentsinfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-domain/src/main/java/top/tsama/baseapiservicedomain/model/Comment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-domain/src/main/java/top/tsama/baseapiservicedomain/model/CommentDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-domain/src/main/java/top/tsama/baseapiservicedomain/model/Course.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-domain/src/main/java/top/tsama/baseapiservicedomain/model/CourseComment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-domain/src/main/java/top/tsama/baseapiservicedomain/model/CourseVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-domain/src/main/java/top/tsama/baseapiservicedomain/model/Enlist.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-web/src/main/resources/generator/mybatisGeneratorConfig.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base-api-service-domain/src/main/java/top/tsama/baseapiservicedomain/model/EnlistVoinfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>base-api-service-web:war</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>base-api-service-services</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.32068965" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: ch.qos.logback:logback-classic:1.1.11</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

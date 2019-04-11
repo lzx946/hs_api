@@ -41,7 +41,7 @@ public class StudentController {
      * @return
      */
     @RequestMapping("/getStudentlist")
-    public  List<StudentsVoinfo> getStudentlist(HttpServletRequest request, HttpServletResponse response, Pagination pagination) {
+    public  String getStudentlist(HttpServletRequest request, HttpServletResponse response, Pagination pagination) {
         response.setHeader("Access-Control-Allow-Origin", ActionUtil.CrossDomain);
         String id = request.getParameter("id");
         StudentsVoinfo studentsVoinfo = new StudentsVoinfo();
@@ -58,8 +58,8 @@ public class StudentController {
                         studentsVoinfoList.get(i).setUrl(ActionUtil.ROOTURL + studentsVoinfoList.get(i).getUrl());
                     }
                     if (studentsVoinfoList.size() != 0 && id == null) {
-                        StudentsVoinfo studentsVoinfoshow = new StudentsVoinfo();
-                        studentsVoinfoshow.setId(studentsVoinfoList.get(i).getId());
+                       StudentsVoinfo studentsVoinfoshow = new StudentsVoinfo();
+/*                          studentsVoinfoshow.setId(studentsVoinfoList.get(i).getId());
                         studentsVoinfoshow.setUrl(studentsVoinfoList.get(i).getUrl());
                         studentsVoinfoshow.setRealname(studentsVoinfoList.get(i).getRealname());
                         studentsVoinfoshow.setEnname(studentsVoinfoList.get(i).getEnname());
@@ -71,23 +71,26 @@ public class StudentController {
                             } else {
                                 studentsVoinfoshow.setOtherposition(studentsVoinfoList.get(i).getOtherposition());
                             }
-                        }
+                        }*/
                         studentsVoinfoshow.setCreatetime(studentsVoinfoList.get(i).getCreatetime());
+                        studentsVoinfoshow=studentsVoinfoList.get(i);
                         studentsVoinfos.add(studentsVoinfoshow);
                     }
                 }
                 System.out.println(studentsVoinfos.size());
                 if (id == null || "".equals(id)) {
-                    return studentsVoinfos;
+                    return webUtil.result(webUtil.FLAG_SUCCESS,webUtil.ERROR_CODE_SUCCESS,"查询学员列表成功",studentsVoinfos);
+                   /// return studentsVoinfos;
                 }
                 logger.info("StudentController查询学员列表成功");
-                return studentsVoinfoList;
+                return webUtil.result(webUtil.FLAG_SUCCESS,webUtil.ERROR_CODE_SUCCESS,"查询学员成功",studentsVoinfoList);
+              //  return studentsVoinfoList;
             }
         } catch (Exception e) {
             logger.error("StudentController查询学员列表失败" + e.getMessage());
             e.printStackTrace();
         }
-        return null;
+        return webUtil.result(webUtil.FLAG__FAILED,webUtil.ERROR_CODE_ILLEGAL,"查询学员失败",null);
     }
 
     /**
@@ -101,22 +104,22 @@ public class StudentController {
     @RequestMapping("updateStudentinfo")
     public String updateStudentinfo(HttpServletRequest request, HttpServletResponse response, Studentsinfo studentsinfo) {
         response.setHeader("Access-Control-Allow-Origin", ActionUtil.CrossDomain);
-        String flagemail = request.getParameter("flag");
-        if (flagemail != null && flagemail != "" && Integer.parseInt(flagemail) == 0 && studentsinfo.getEmail() != null) {
+        String flagphone = request.getParameter("flag");
+        if (flagphone != null && flagphone != "" && Integer.parseInt(flagphone) == 0 && studentsinfo.getPhone() != null) {
             Studentsinfo stuvery = new Studentsinfo();
-            stuvery.setEmail(studentsinfo.getEmail());
+            stuvery.setEmail(studentsinfo.getPhone());
             Studentsinfo selectinfo = loginRegisterService.selectByAccountEmail(stuvery);
-            if (!selectinfo.getEmail().equals(studentsinfo.getEmail())) {
-                return webUtil.result(webUtil.UPDATE_FAILED, webUtil.ERROR_CODE_ILLEGAL, "邮箱已存在", null);
+            if (!selectinfo.getPhone().equals(studentsinfo.getPhone())) {
+                return webUtil.result(webUtil.UPDATE_FAILED, webUtil.ERROR_CODE_ILLEGAL, "电话号码已存在", null);
             }
             Studentsinfo studentsinfoup = new Studentsinfo();
-            studentsinfoup.setEmail(studentsinfo.getEmail());
+            studentsinfoup.setPhone(studentsinfo.getEmail());
             studentsinfoup.setId(studentsinfo.getId());
             int flag = studentService.updateByPrimaryKey(studentsinfoup);
             if (flag == 1) {
-                return webUtil.result(webUtil.FLAG_SUCCESS, webUtil.ERROR_CODE_SUCCESS, "更新邮箱成功", flag);
+                return webUtil.result(webUtil.FLAG_SUCCESS, webUtil.ERROR_CODE_SUCCESS, "更新电话号码成功", flag);
             }
-            return webUtil.result(webUtil.FLAG__FAILED, webUtil.ERROR_CODE_ILLEGAL, "邮箱更新失败", null);
+            return webUtil.result(webUtil.FLAG__FAILED, webUtil.ERROR_CODE_ILLEGAL, "电话号码更新失败", null);
         }
         studentsinfo.setEmail(null);
         int flagup = studentService.updateByPrimaryKey(studentsinfo);
@@ -124,5 +127,46 @@ public class StudentController {
             return webUtil.result(webUtil.FLAG_SUCCESS, webUtil.ERROR_CODE_SUCCESS, "更新学员信息成功", flagup);
         }
         return webUtil.result(webUtil.FLAG__FAILED, webUtil.ERROR_CODE_ILLEGAL, "更新学员信息失败", null);
+    }
+
+    /**
+     * 验证手机和姓名
+     * @param request
+     * @param response
+     * @param studentsinfo
+     * @return
+     */
+    @RequestMapping("verifyPhoneRealname")
+    public String verifyPhoneRealname(HttpServletRequest request, HttpServletResponse response, Studentsinfo studentsinfo) {
+        response.setHeader("Access-Control-Allow-Origin", ActionUtil.CrossDomain);
+        if (studentsinfo.getRealname()!=null&&!"".equals(studentsinfo.getRealname())&&studentsinfo.getPhone()!=null&&
+                !"".equals(studentsinfo.getPhone())) {
+            Studentsinfo studentsinfoinfo=studentService.selectByPrimaryKey(studentsinfo);
+            if (studentsinfoinfo==null) {
+                return webUtil.result(webUtil.UPDATE_FAILED, webUtil.ERROR_CODE_ILLEGAL, "验证信息错误", null);
+            }
+            else {
+                return webUtil.result(webUtil.FLAG_SUCCESS, webUtil.ERROR_CODE_SUCCESS, "验证信息成功", studentsinfoinfo);
+            }
+        }
+        return webUtil.result(webUtil.FLAG__FAILED, webUtil.ERROR_CODE_ILLEGAL, "信息不全", null);
+    }
+    /**
+     * 修改密码或者找回密码
+     * @param request
+     * @param response
+     * @param studentsinfo
+     * @return
+     */
+    @RequestMapping("forgetpassword")
+    public String forgetpassword(HttpServletRequest request, HttpServletResponse response, Studentsinfo studentsinfo) {
+        response.setHeader("Access-Control-Allow-Origin", ActionUtil.CrossDomain);
+            boolean flag=studentService.forgetpassword(studentsinfo);
+            if (flag==false) {
+                return webUtil.result(webUtil.UPDATE_FAILED, webUtil.ERROR_CODE_ILLEGAL, "找回密码失败", null);
+            }
+            else {
+                return webUtil.result(webUtil.FLAG_SUCCESS, webUtil.ERROR_CODE_SUCCESS, "找回密码成功", flag);
+            }
     }
 }

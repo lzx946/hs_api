@@ -31,6 +31,7 @@
         <result column="realname" jdbcType="VARCHAR" property="expertName"/>
         <result column="academic" jdbcType="VARCHAR" property="expertAcademic"/>
         <result column="url" jdbcType="VARCHAR" property="imgUrl"/>
+        <result column="codeflagname" jdbcType="VARCHAR" property="codeflagname"/>
     </resultMap>
     <resultMap id="HomeDataDetailResultMap" type="top.tsama.baseapiservicedomain.model.HomeDataDetail">
         <id column="id" jdbcType="INTEGER" property="courseId"/>
@@ -81,48 +82,97 @@
             <if test="createtime!=null">  createtime = #{createtime,jdbcType=TIMESTAMP},</if>
             <if test="summary!=null">  summary = #{summary,jdbcType=VARCHAR},</if>
             <if test="period!=null">period=#{period,jdbcType=VARCHAR},</if>
-            <if test="reason!=nnull"> reason=#{reason,jdbcType=VARCHAR},</if>
+            <if test="reason!=null"> reason=#{reason,jdbcType=VARCHAR},</if>
             <if test="classroom!=null">classroom=#{classroom,jdbcType=VARCHAR},</if>
         </trim>
         where id = #{id,jdbcType=INTEGER}
   </update>
 
-    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select id, name, room, teacherid, state, type, posterid, content, starttime, stoptime, 
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultType="top.tsama.baseapiservicedomain.model.Course">
+    select id, name, room, teacherid, state, type, posterid, content, starttime, stoptime,
     reason, createtime, period, classroom, summary
     from course
     where id = #{id,jdbcType=INTEGER}
     ORDER BY createtime DESC
   </select>
 
-    <select id="selectAll" resultMap="BaseResultMap">
-    select id, name, room, teacherid, state, type, posterid, content, starttime, stoptime, 
-    reason, createtime, period, classroom, summary
-    from course
-    ORDER BY createtime DESC
+    <select id="selectAll" parameterType="top.tsama.baseapiservicedomain.model.CourseVo" resultType="top.tsama.baseapiservicedomain.model.CourseVo">
+    select name,a.id,  teacherid,starttime, stoptime,a.createtime,a.summary,b.realname,b.academic,b.employer,c.url
+    from course a  LEFT JOIN expertsinfo b ON a.teacherid=b.id
+    LEFT JOIN sys_file c ON b.photoid=c.id
+    LEFT JOIN sys_dictionary d ON d.codeflag=a.classroom
+     where a.state=1 and b.state=1 and d.code=100
+     <if test="id!=null">
+         and a.id=#{id}
+     </if>
+      <if test="teacherid!=null">
+            and a.teacherid=#{teacherid}
+      </if>
+     group by name,realname
+     order by a.iscommend ASC,a.starttime DESC
   </select>
 
+    <select id="selectByteach" parameterType="top.tsama.baseapiservicedomain.model.CourseVo" resultType="top.tsama.baseapiservicedomain.model.CourseVo">
+        select a.id, room, starttime, stoptime,a.createtime,a.period,d.codeflagname
+        from course a LEFT JOIN expertsinfo b ON a.teacherid=b.id
+        LEFT JOIN sys_file c ON b.photoid=c.id
+        LEFT JOIN sys_dictionary d ON d.codeflag=a.classroom
+        where a.state=1 and b.state=1 and d.code=100
+        <if test="teacherid!=null">
+            and a.teacherid=#{teacherid}
+        </if>
+        <if test="name!=null and name!=''">
+            and name=#{name}
+        </if>
+        order by a.iscommend ASC,a.starttime DESC
+    </select>
+
+
     <select id="selectHomeData" resultMap="HomeDataResultMap">
-      select a.id, a.name, a.room, a.teacherid, a.starttime, a.stoptime,
-      a.period, a.classroom,b.realname,b.academic,c.url
-      from course a
-      LEFT JOIN expertsinfo b ON a.teacherid=b.id
-      LEFT JOIN sys_file c ON b.photoid=c.id
-      WHERE a.state=1 AND b.state=1
-      ORDER BY a.createtime DESC limit 6
+        (select a.id, a.name, a.room, a.teacherid, a.starttime, a.stoptime,
+        a.period, a.classroom,b.realname,b.academic,c.url,d.codeflagname,a.iscommend
+        from course a
+        LEFT JOIN expertsinfo b ON a.teacherid=b.id
+        LEFT JOIN sys_file c ON b.photoid=c.id
+        LEFT JOIN sys_dictionary d ON d.codeflag=a.classroom
+        WHERE a.state=1 AND b.state=1 AND a.starttime >= NOW() AND a.iscommend=0 AND d.code=100 ORDER BY a.starttime ASC limit 6) UNION
+        (select a.id, a.name, a.room, a.teacherid, a.starttime, a.stoptime,
+        a.period, a.classroom,b.realname,b.academic,c.url,d.codeflagname,a.iscommend
+        from course a
+        LEFT JOIN expertsinfo b ON a.teacherid=b.id
+        LEFT JOIN sys_file c ON b.photoid=c.id
+        LEFT JOIN sys_dictionary d ON d.codeflag=a.classroom
+        WHERE a.state=1 AND b.state=1 AND NOW() > a.starttime  AND a.iscommend=0  AND d.code=100 ORDER BY a.starttime DESC ) limit 6
+    </select>
+    <select id="selectHomeDataList" resultMap="HomeDataResultMap">
+        (select a.id, a.name, a.room, a.teacherid, a.starttime, a.stoptime,
+        a.period, a.classroom,b.realname,b.academic,c.url,d.codeflagname,a.iscommend
+        from course a
+        LEFT JOIN expertsinfo b ON a.teacherid=b.id
+        LEFT JOIN sys_file c ON b.photoid=c.id
+         LEFT JOIN sys_dictionary d ON d.codeflag=a.classroom
+        WHERE a.state=1 AND b.state=1 AND a.starttime >= NOW() AND d.code=100 ORDER BY a.starttime ASC limit 6) UNION
+        (select a.id, a.name, a.room, a.teacherid, a.starttime, a.stoptime,
+        a.period, a.classroom,b.realname,b.academic,c.url,d.codeflagname,a.iscommend
+        from course a
+        LEFT JOIN expertsinfo b ON a.teacherid=b.id
+        LEFT JOIN sys_file c ON b.photoid=c.id
+         LEFT JOIN sys_dictionary d ON d.codeflag=a.classroom
+        WHERE a.state=1 AND b.state=1 AND NOW() > a.starttime AND d.code=100  ORDER BY a.starttime DESC )
     </select>
     <select id="selectHomeDataDetail"  parameterType="java.lang.Integer" resultMap="HomeDataDetailResultMap">
         select a.id, a.name, a.room, a.teacherid, a.starttime, a.stoptime,
-        a.period, a.classroom ,a.summary AS courseSummary,b.realname,b.summary AS expertSummary
+        a.period, a.classroom ,a.summary AS courseSummary,b.realname,b.summary AS expertSummary,d.codeflagname,a.iscommend
         from course a
         LEFT JOIN expertsinfo b ON a.teacherid=b.id
-        WHERE a.id=#{id,jdbcType=INTEGER} AND a.state=1 AND b.state=1
+         LEFT JOIN sys_dictionary d ON d.codeflag=a.classroom
+        WHERE a.id=#{id,jdbcType=INTEGER} AND a.state=1 AND b.state=1 AND d.code=100
     </select>
     <select id="selectCoursebyteacher"  parameterType="java.lang.Integer" resultMap="BaseResultMap">
          select a.id, a.name, a.room, a.teacherid, a.starttime, a.stoptime,state,createtime,
-        a.period, a.classroom ,a.summary from course a
-        WHERE teacherid=#{teacherid,jdbcType=INTEGER}
-        ORDER BY createtime DESC
+        a.period, a.classroom ,a.summary,d.codeflagname,a.iscommend from course a   LEFT JOIN sys_dictionary d ON d.codeflag=a.classroom
+        WHERE teacherid=#{teacherid,jdbcType=INTEGER} AND d.code=100 and a.state=1
+        ORDER BY a.iscommend ASC,a.createtime DESC
     </select>
     <insert id="insertBatch" parameterType="java.util.List" useGeneratedKeys="true">
         <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER">

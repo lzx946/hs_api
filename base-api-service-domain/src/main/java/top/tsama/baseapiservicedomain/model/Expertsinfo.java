@@ -36,6 +36,24 @@ public class Expertsinfo {
     private String otheracademic;
 
     private String motto;
+    private String summarys;
+    private Integer iscommend;
+
+    public String getSummarys() {
+        return summarys;
+    }
+
+    public void setSummarys(String summarys) {
+        this.summarys = summarys;
+    }
+
+    public Integer getIscommend() {
+        return iscommend;
+    }
+
+    public void setIscommend(Integer iscommend) {
+        this.iscommend = iscommend;
+    }
 
     public String getOtheracademic() {
         return otheracademic;

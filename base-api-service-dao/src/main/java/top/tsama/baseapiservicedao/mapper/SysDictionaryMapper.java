@@ -12,7 +12,7 @@ public interface SysDictionaryMapper {
 
     SysDictionary selectByPrimaryKey(Integer id);
 
-    List<SysDictionary> selectAll();
+    List<SysDictionary> selectAll(SysDictionary sysDictionary);
 
     int updateByPrimaryKey(SysDictionary record);
 }

@@ -2,6 +2,7 @@ package top.tsama.baseapiservicedao.mapper;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
 import top.tsama.baseapiservicedomain.model.News;
 @Component
@@ -15,4 +16,7 @@ public interface NewsMapper {
     List<News> selectAll(News news);
 
     int updateByPrimaryKey(News record);
+
+    List<News> homeNews(Integer iscommend);
+
 }

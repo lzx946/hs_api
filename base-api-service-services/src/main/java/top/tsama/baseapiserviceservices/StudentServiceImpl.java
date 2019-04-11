@@ -6,6 +6,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import top.tsama.baseapiserviceapi.StudentService;
+import top.tsama.baseapiservicecommon.MD5;
 import top.tsama.baseapiservicecommon.Pagination;
 import top.tsama.baseapiservicedao.mapper.StudentsinfoMapper;
 import top.tsama.baseapiservicedomain.model.Expertsinfo;
@@ -32,9 +33,22 @@ public class StudentServiceImpl implements StudentService {
         return 0;
     }
 
+    public Studentsinfo selectByPrimaryKey(Studentsinfo studentsinfo) {
+        Studentsinfo studentsinfolist=studentsinfoMapper.selectByPrimaryKey(studentsinfo);
+        if(studentsinfolist!=null)
+            return studentsinfolist;
+        else
+            return null;
+    }
+
     @Override
-    public Studentsinfo selectByPrimaryKey(Integer id) {
-        return null;
+    public boolean forgetpassword(Studentsinfo studentsinfo){
+                studentsinfo.setPassword(MD5.encodeString(studentsinfo.getPassword()));
+                int flag=studentsinfoMapper.updateByPrimaryKey(studentsinfo);
+                if(flag==1) {
+                    return true;
+                }
+                return  false;
     }
 
     @Override

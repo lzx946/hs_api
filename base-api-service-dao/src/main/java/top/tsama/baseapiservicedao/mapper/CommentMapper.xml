@@ -8,6 +8,7 @@
     <result column="state" jdbcType="INTEGER" property="state" />
     <result column="createtime" jdbcType="TIMESTAMP" property="createtime" />
     <result column="content" jdbcType="LONGVARCHAR" property="content" />
+    <result column="iscommend" jdbcType="INTEGER" property="iscommend" />
   </resultMap>
   <resultMap id="CidResultMap" type="top.tsama.baseapiservicedomain.model.CommentDetail">
     <id column="id" jdbcType="INTEGER" property="id" />
@@ -18,6 +19,7 @@
     <result column="content" jdbcType="LONGVARCHAR" property="content" />
     <result column="realname" jdbcType="VARCHAR" property="commentName" />
     <result column="url" jdbcType="VARCHAR" property="imgUrl" />
+    <result column="iscommend" jdbcType="INTEGER" property="iscommend" />
   </resultMap>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from comment
@@ -28,10 +30,10 @@
       SELECT LAST_INSERT_ID()
     </selectKey>
     insert into comment ( cid, uid,
-      state, createtime, content
+      state, createtime, content,iscommend
       )
     values (#{cid,jdbcType=INTEGER}, #{uid,jdbcType=INTEGER},
-      #{state,jdbcType=INTEGER}, #{createtime,jdbcType=TIMESTAMP}, #{content,jdbcType=LONGVARCHAR}
+      #{state,jdbcType=INTEGER}, #{createtime,jdbcType=TIMESTAMP}, #{content,jdbcType=LONGVARCHAR}, #{iscommend,jdbcType=INTEGER}
       )
   </insert>
   <update id="updateByPrimaryKey" parameterType="top.tsama.baseapiservicedomain.model.Comment">
@@ -41,16 +43,17 @@
       state = #{state,jdbcType=INTEGER},
       createtime = #{createtime,jdbcType=TIMESTAMP},
       content = #{content,jdbcType=LONGVARCHAR}
+      iscommend = #{iscommend,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select id, cid, uid, state, createtime, content
+    select id, cid, uid, state, createtime, content,iscommend
     from comment
     where id = #{id,jdbcType=INTEGER}
   </select>
 
   <select id="selectByCid" parameterType="java.lang.Integer" resultMap="CidResultMap">
-    select a.id, a.cid, a.uid, a.state, a.createtime, a.content,b.realname,c.url
+    select a.id, a.cid, a.uid, a.state, a.createtime, a.content,b.realname,c.url,a.iscommend
     from comment a
     LEFT JOIN studentsinfo b ON a.uid=b.id
     LEFT JOIN sys_file c ON b.photoid=c.id
@@ -58,9 +61,15 @@
     ORDER BY a.createtime DESC
   </select>
 
-  <select id="selectAll" resultMap="BaseResultMap">
-    select id, cid, uid, state, createtime, content
-    from comment
+  <select id="selectAll" parameterType="java.lang.Integer" resultMap="CidResultMap">
+    select a.id, a.cid, a.uid, a.state, a.createtime, a.content,b.realname,c.url,a.iscommend
+    from comment a
+    LEFT JOIN studentsinfo b ON a.uid=b.id
+    LEFT JOIN sys_file c ON b.photoid=c.id
+    WHERE a.state=0
+    <if test="_parameter!=null">
+      and iscommend=#{_parameter,jdbcType=INTEGER}
+    </if>
     ORDER BY createtime DESC
   </select>
 </mapper>

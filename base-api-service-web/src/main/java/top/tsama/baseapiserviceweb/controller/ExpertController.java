@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import top.tsama.baseapiserviceapi.ExpertService;
 import top.tsama.baseapiserviceapi.HomeDataService;
+import top.tsama.baseapiserviceapi.LoginRegisterService;
 import top.tsama.baseapiservicecommon.ActionUtil;
 import top.tsama.baseapiservicecommon.Pagination;
 import top.tsama.baseapiservicecommon.webUtil;
@@ -30,32 +31,34 @@ public class ExpertController {
     private ExpertService expertService;
     @Autowired
     private HomeDataService homeDataService;
+    @Autowired
+    private LoginRegisterService loginRegisterService;
 
     /**
      * 获取专家列表及详情
      * @param request
      * @param response
-     * @param pagination
+     * @param
      * @return
      */
     @RequestMapping("getExpertlist")
-    public List<ExpertsVoinfo> getExpertlist(HttpServletRequest request, HttpServletResponse response, Pagination pagination){
+    public String getExpertlist(HttpServletRequest request, HttpServletResponse response){
         response.setHeader("Access-Control-Allow-Origin", ActionUtil.CrossDomain);
         ExpertsVoinfo expertsVoinfo=new ExpertsVoinfo();
         String id=request.getParameter("id");
         if(id!=null&&!"".equals(id)){
             expertsVoinfo.setId(Integer.parseInt(id));
         }
-        List<ExpertsVoinfo> expertsVoinfoList=expertService.selectAll(expertsVoinfo,pagination);
-        PageInfo<ExpertsVoinfo> page=new PageInfo<ExpertsVoinfo>(expertsVoinfoList);
+        List<ExpertsVoinfo> expertsVoinfoList=expertService.selectAll(expertsVoinfo);
+    //    PageInfo<ExpertsVoinfo> page=new PageInfo<ExpertsVoinfo>(expertsVoinfoList);
         if(expertsVoinfoList!=null){
             logger.info("查询专家列表及详情成功");
-            return expertsVoinfoList;
-//            return webUtil.resultTotal(webUtil.FLAG_SUCCESS, webUtil.ERROR_CODE_SUCCESS, "查询专家列表成功", expertsVoinfoList, page.getTotal());
+        //    return expertsVoinfoList;
+            return webUtil.resultTotal(webUtil.FLAG_SUCCESS, webUtil.ERROR_CODE_SUCCESS, "查询专家列表成功", expertsVoinfoList, 0);
         }
         logger.error("查询专家列表及详情失败");
-        return null;
-//        return webUtil.resultTotal(webUtil.FLAG__FAILED, webUtil.ERROR_CODE_ILLEGAL, "查询专家列表失败", null, 0);
+     //   return null;
+       return webUtil.resultTotal(webUtil.FLAG__FAILED, webUtil.ERROR_CODE_ILLEGAL, "查询专家列表失败", null, 0);
     }
 
     /**
@@ -114,9 +117,49 @@ public class ExpertController {
         String teacherid = request.getParameter("teacherid");
         if (teacherid != null && teacherid != "") {
             List<Course> courseList = homeDataService.selectCoursebyteacher(Integer.parseInt(teacherid), pagination);
-            PageInfo<Course> page = new PageInfo<Course>(courseList);
-            return webUtil.resultTotal(webUtil.FLAG_SUCCESS, webUtil.ERROR_CODE_SUCCESS, "专家查询课程成功", courseList, page.getTotal());
+        //    PageInfo<Course> page = new PageInfo<Course>(courseList);
+            return webUtil.result(webUtil.FLAG_SUCCESS, webUtil.ERROR_CODE_SUCCESS, "专家查询课程成功", courseList);
         }
         return webUtil.result(webUtil.FLAG__FAILED, webUtil.ERROR_CODE_ILLEGAL, "专家查询课程失败", null);
+    }
+    /**
+     * 验证手机和姓名
+     * @param request
+     * @param response
+     * @param expertsinfo
+     * @return
+     */
+    @RequestMapping("verifyPhoneRealname")
+    public String verifyPhoneRealname(HttpServletRequest request, HttpServletResponse response, Expertsinfo expertsinfo) {
+        response.setHeader("Access-Control-Allow-Origin", ActionUtil.CrossDomain);
+        if (expertsinfo.getRealname()!=null&&!"".equals(expertsinfo.getRealname())&&expertsinfo.getPhone()!=null&&
+                !"".equals(expertsinfo.getPhone())) {
+            Expertsinfo expertsinfoinfo=loginRegisterService.selectByAccountEmail(expertsinfo);
+            if (expertsinfoinfo==null) {
+                return webUtil.result(webUtil.UPDATE_FAILED, webUtil.ERROR_CODE_ILLEGAL, "验证信息错误", null);
+            }
+            else {
+                return webUtil.result(webUtil.FLAG_SUCCESS, webUtil.ERROR_CODE_SUCCESS, "验证信息成功", expertsinfoinfo);
+            }
+        }
+        return webUtil.result(webUtil.FLAG__FAILED, webUtil.ERROR_CODE_ILLEGAL, "信息不全", null);
+    }
+    /**
+     * 修改密码或者找回密码
+     * @param request
+     * @param response
+     * @param expertsinfo
+     * @return
+     */
+    @RequestMapping("forgetpassword")
+    public String forgetpassword(HttpServletRequest request, HttpServletResponse response, Expertsinfo expertsinfo) {
+        response.setHeader("Access-Control-Allow-Origin", ActionUtil.CrossDomain);
+        boolean flag=expertService.updateByPrimaryKey(expertsinfo);
+        if (flag==false) {
+            return webUtil.result(webUtil.UPDATE_FAILED, webUtil.ERROR_CODE_ILLEGAL, "找回密码失败", null);
+        }
+        else {
+            return webUtil.result(webUtil.FLAG_SUCCESS, webUtil.ERROR_CODE_SUCCESS, "找回密码成功", flag);
+        }
     }
 }

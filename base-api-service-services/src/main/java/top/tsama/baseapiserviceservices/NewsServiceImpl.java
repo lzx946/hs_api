@@ -36,8 +36,8 @@ public class NewsServiceImpl implements NewsService{
     }
 
     @Override
-    public List<News> selectAll(News news,Pagination pagination) {
-        PageHelper.startPage(pagination.getPageNum(),pagination.getNumPerPage());
+    public List<News> selectAll(News news) {
+    //    PageHelper.startPage(pagination.getPageNum(),pagination.getNumPerPage());
         try{
             List<News> newsinfoList=newsMapper.selectAll(news);
             if(newsinfoList!=null){

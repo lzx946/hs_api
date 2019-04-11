@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Component;
 import top.tsama.baseapiservicedomain.model.Course;
+import top.tsama.baseapiservicedomain.model.CourseVo;
 import top.tsama.baseapiservicedomain.model.HomeData;
 import top.tsama.baseapiservicedomain.model.HomeDataDetail;
 
@@ -20,8 +21,14 @@ public interface CourseMapper {
 
     Course selectByPrimaryKey(Integer id);
 
-    List<Course> selectAll();
+    List<CourseVo> selectAll(CourseVo courseVo);
 
+
+    /**
+     * 更新课程
+     * @param record
+     * @return
+     */
     int updateByPrimaryKey(Course record);
 
     /**
@@ -29,6 +36,11 @@ public interface CourseMapper {
      * @return
      */
     List<HomeData> selectHomeData();
+    /**
+     * 获取学习数据
+     * @return
+     */
+    List<HomeData> selectHomeDataList();
 
     /**
      * 获取首页详情数据
@@ -42,4 +54,11 @@ public interface CourseMapper {
      * @return
      */
     List<Course> selectCoursebyteacher(Integer teacherid);
+
+    /**
+     * 根据专家id和课程名查询不同地点的课程
+     * @param courseVo
+     * @return
+     */
+    List<CourseVo> selectByteach(CourseVo courseVo);
 }

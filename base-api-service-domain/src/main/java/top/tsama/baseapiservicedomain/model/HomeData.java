@@ -17,6 +17,24 @@ public class HomeData implements Serializable{
     private String expertName;
     private String expertAcademic;
     private String imgUrl;
+    private String codeflagname;
+    private Integer iscommend;
+
+    public Integer getIscommend() {
+        return iscommend;
+    }
+
+    public void setIscommend(Integer iscommend) {
+        this.iscommend = iscommend;
+    }
+
+    public String getCodeflagname() {
+        return codeflagname;
+    }
+
+    public void setCodeflagname(String codeflagname) {
+        this.codeflagname = codeflagname;
+    }
 
     public String getImgUrl() {
         return imgUrl;

@@ -14,6 +14,15 @@ public class Comment {
     private Date createtime;
 
     private String content;
+    private Integer iscommend;
+
+    public Integer getIscommend() {
+        return iscommend;
+    }
+
+    public void setIscommend(Integer iscommend) {
+        this.iscommend = iscommend;
+    }
 
     public Integer getId() {
         return id;

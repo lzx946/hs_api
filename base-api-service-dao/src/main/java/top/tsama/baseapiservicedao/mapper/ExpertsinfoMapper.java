@@ -30,5 +30,9 @@ public interface ExpertsinfoMapper {
      * @return
      */
     Expertsinfo selectByAccountEmail(Expertsinfo record);
+    /**
+     *首页教授推荐
+     */
+    List<ExpertsVoinfo> homeExpert(ExpertsVoinfo record);
 
 }

@@ -19,7 +19,7 @@ public class CommentController {
     @Autowired
     private CommentService commentService;
 
-    @RequestMapping("/comment")
+    @RequestMapping("/comment")   //评论
     public List<CommentDetail> comment(HttpServletResponse response,Integer cid){
         response.setHeader("Access-Control-Allow-Origin", ActionUtil.CrossDomain);
         if(cid==null){
@@ -29,7 +29,7 @@ public class CommentController {
         return list;
     }
 
-    @RequestMapping(value = "/commentSubmit")
+    @RequestMapping(value = "/commentSubmit")  //提交评论
     public int commentSubmit(HttpServletResponse response,Comment comment){
         response.setHeader("Access-Control-Allow-Origin", ActionUtil.CrossDomain);
         if(comment==null){

@@ -21,7 +21,9 @@ public interface NewsService {
      * @param pagination
      * @return
      */
-    List<News> selectAll(News news,Pagination pagination);
+//    List<News> selectAll(News news,Pagination pagination);
+
+    List<News> selectAll(News news);
 
     int updateByPrimaryKey(News record);
 }

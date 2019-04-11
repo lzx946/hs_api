@@ -1,9 +1,7 @@
 package top.tsama.baseapiserviceapi;
 
 import top.tsama.baseapiservicecommon.Pagination;
-import top.tsama.baseapiservicedomain.model.Course;
-import top.tsama.baseapiservicedomain.model.HomeData;
-import top.tsama.baseapiservicedomain.model.HomeDataDetail;
+import top.tsama.baseapiservicedomain.model.*;
 
 import java.util.List;
 
@@ -16,6 +14,11 @@ public interface HomeDataService {
      * @return
      */
     List<HomeData> selectHomeData();
+    /**
+     * 获取学习数据
+     * @return
+     */
+    List<HomeData> selectHomeDataList();
 
     /**
      * 获取首页详情数据
@@ -37,4 +40,28 @@ public interface HomeDataService {
      * @return
      */
     List<Course> selectCoursebyteacher(Integer teacherid, Pagination pagination);
+
+    /**
+     * 更新课程
+     */
+    int updateByPrimaryKey(Course record);
+
+    /**
+     * 获取首页背景图
+     * @return
+     */
+    List<Backgroudinfo> selectAll();
+
+    /**
+     * 获取首页新闻
+     * @return
+     */
+    List<News> homeNews(Integer iscommend);
+
+    /**
+     * 获取教师推荐
+     * @param record
+     * @return
+     */
+    List<ExpertsVoinfo> homeExpert(ExpertsVoinfo record);
 }

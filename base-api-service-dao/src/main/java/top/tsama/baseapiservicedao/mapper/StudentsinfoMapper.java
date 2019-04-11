@@ -11,7 +11,7 @@ public interface StudentsinfoMapper {
 
     int insert(Studentsinfo record);
 
-    Studentsinfo selectByPrimaryKey(Integer id);
+    Studentsinfo selectByPrimaryKey(Studentsinfo studentsinfo);
 
     List<StudentsVoinfo> selectAll(StudentsVoinfo studentsVoinfo);
 

@@ -8,8 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import top.tsama.baseapiserviceapi.ExpertService;
 import top.tsama.baseapiservicecommon.ActionUtil;
+import top.tsama.baseapiservicecommon.MD5;
 import top.tsama.baseapiservicecommon.Pagination;
+import top.tsama.baseapiservicedao.mapper.CourseMapper;
 import top.tsama.baseapiservicedao.mapper.ExpertsinfoMapper;
+import top.tsama.baseapiservicedomain.model.Course;
 import top.tsama.baseapiservicedomain.model.ExpertsVoinfo;
 import top.tsama.baseapiservicedomain.model.Expertsinfo;
 
@@ -24,17 +27,21 @@ public class ExpertServiceImpl implements ExpertService {
     Logger logger = LoggerFactory.getLogger(getClass().getName());
     @Autowired
     private ExpertsinfoMapper expertsinfoMapper;
-
+    @Autowired
+    private CourseMapper courseMapper;
     @Override
-    public List<ExpertsVoinfo> selectAll(ExpertsVoinfo expertsVoinfo, Pagination pagination) {
+    public List<ExpertsVoinfo> selectAll(ExpertsVoinfo expertsVoinfo) {
         List<ExpertsVoinfo> expertsVoinfos = new ArrayList<ExpertsVoinfo>();
-        PageHelper.startPage(pagination.getPageNum(), pagination.getNumPerPage());
         try {
+        //    PageHelper.startPage(pagination.getPageNum(), pagination.getNumPerPage());
             List<ExpertsVoinfo> expertsVoinfoList = expertsinfoMapper.selectAll(expertsVoinfo);
            /* PageInfo<ExpertsVoinfo> page = new PageInfo<ExpertsVoinfo>(expertsVoinfoList);*/
             if (expertsVoinfoList != null) {
                 for (int i = 0; i < expertsVoinfoList.size(); i++) {
                     if (expertsVoinfoList.size() != 0) {
+                        List<Course> courses=courseMapper.selectCoursebyteacher(expertsVoinfoList.get(i).getId());
+                        if(courses!=null)
+                            expertsVoinfoList.get(i).setCourses(courses);
                         expertsVoinfoList.get(i).setUrl(ActionUtil.ROOTURL + expertsVoinfoList.get(i).getUrl());
                     }
                     if (expertsVoinfoList.size() != 0 && expertsVoinfo.getId() == null) {
@@ -46,6 +53,10 @@ public class ExpertServiceImpl implements ExpertService {
                         expertsVoinfoshow.setAcademic(expertsVoinfoList.get(i).getAcademic());
                         expertsVoinfoshow.setOpenemail(expertsVoinfoList.get(i).getOpenemail());
                         expertsVoinfoshow.setEnname(expertsVoinfoList.get(i).getEnname());
+                        expertsVoinfoshow.setEmployer(expertsVoinfoList.get(i).getEmployer());
+                        expertsVoinfoshow.setSummarys(expertsVoinfoList.get(i).getSummarys());
+                        expertsVoinfoshow.setSummary(expertsVoinfoList.get(i).getSummary());
+                        expertsVoinfoshow.setCourses(expertsVoinfoList.get(i).getCourses());
                         if (expertsVoinfoList.get(i).getOtheracademic() != null) {
                             String[] othacademic = expertsVoinfoList.get(i).getOtheracademic().split(",");
                             if (othacademic.length > 3) {
@@ -74,6 +85,9 @@ public class ExpertServiceImpl implements ExpertService {
     @Override
     public boolean updateByPrimaryKey(Expertsinfo record) {
         try {
+            if(record.getPassword()!=null){
+                record.setPassword(MD5.encodeString(record.getPassword()));
+            }
             int flag = expertsinfoMapper.updateByPrimaryKey(record);
             if (flag == 1) {                return true;
             }

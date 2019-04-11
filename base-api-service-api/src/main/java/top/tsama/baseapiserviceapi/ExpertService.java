@@ -13,10 +13,10 @@ public interface ExpertService {
     /**
      * 查询专家信息
      * @param expertsVoinfo
-     * @param pagination
+     * @param
      * @return
      */
-    List<ExpertsVoinfo> selectAll(ExpertsVoinfo expertsVoinfo, Pagination pagination);
+    List<ExpertsVoinfo> selectAll(ExpertsVoinfo expertsVoinfo);
 
     /**
      * 更新专家信息

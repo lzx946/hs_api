@@ -11,7 +11,7 @@ import java.util.Map;
 
 public class ActionUtil
 {
-    public static final String ROOTURL="http://121.40.130.50:8888/";
+    public static final String ROOTURL="http://13.59.102.146/";
     /**
      * session中用户名
      */

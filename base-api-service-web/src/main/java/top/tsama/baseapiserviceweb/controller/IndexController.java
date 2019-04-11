@@ -13,6 +13,6 @@ public class IndexController {
 
     @RequestMapping("/")
     public String homeData(){
-        return "static/index";
+        return "index";
     }
 }

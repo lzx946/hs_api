@@ -18,6 +18,10 @@
     <result column="company" jdbcType="LONGVARCHAR" property="company" />
     <result column="summary" jdbcType="LONGVARCHAR" property="summary" />
     <result column="motto" jdbcType="LONGVARCHAR" property="motto" />
+    <result column="studentid" jdbcType="VARCHAR" property="studentid"></result>
+    <result column="qrcode" jdbcType="INTEGER" property="qrcode"></result>
+    <result column="wechat" jdbcType="VARCHAR" property="wechat"></result>
+    <result column="area" jdbcType="INTEGER" property="area"></result>
   </resultMap>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from studentsinfo
@@ -31,13 +35,14 @@
       photoid, phone, account, 
       realname, position, state, 
       createtime, companyurl, enname, 
-      otherposition, company, summary,motto
+      otherposition, company, summary,motto,studentid,qrcode,wechat,area
       )
     values (#{id,jdbcType=INTEGER}, #{email,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
       #{photoid,jdbcType=INTEGER}, #{phone,jdbcType=VARCHAR}, #{account,jdbcType=VARCHAR}, 
       #{realname,jdbcType=VARCHAR}, #{position,jdbcType=VARCHAR}, #{state,jdbcType=INTEGER}, 
       #{createtime,jdbcType=TIMESTAMP}, #{companyurl,jdbcType=VARCHAR}, #{enname,jdbcType=VARCHAR},
-      #{otherposition,jdbcType=VARCHAR}, #{company,jdbcType=LONGVARCHAR}, #{summary,jdbcType=LONGVARCHAR},#{motto,jdbcType=VARCHAR}
+      #{otherposition,jdbcType=VARCHAR}, #{company,jdbcType=LONGVARCHAR}, #{summary,jdbcType=LONGVARCHAR},#{motto,jdbcType=VARCHAR},
+      #{studentid,jdbcType=VARCHAR},#{qrcode,jdbcType=INTEGER},#{wechat,jdbcType=VARCHAR},#{area,jdbcType=INTEGER}
     )
   </insert>
   <update id="updateByPrimaryKey" parameterType="top.tsama.baseapiservicedomain.model.Studentsinfo">
@@ -49,7 +54,7 @@
       <if test="phone!=null"> phone = #{phone,jdbcType=VARCHAR},</if>
       <if test="account!=null"> account = #{account,jdbcType=VARCHAR},</if>
       <if test="realname!=null"> realname = #{realname,jdbcType=VARCHAR},</if>
-      <if test="position!=null">position = #{position,jdbcType=VARCHAR},</if>
+      <if test="position!=null"> position = #{position,jdbcType=VARCHAR},</if>
       <if test="state!=null">state = #{state,jdbcType=INTEGER},</if>
       <if test="createtime!=null"> createtime = #{createtime,jdbcType=TIMESTAMP},</if>
       <if test="companyurl!=null">companyurl = #{companyurl,jdbcType=INTEGER},</if>
@@ -58,23 +63,41 @@
       <if test="enname!=null"> enname = #{enname,jdbcType=VARCHAR},</if>
       <if test="otherposition!=null">otherposition = #{otherposition,jdbcType=VARCHAR},</if>
       <if test="motto!=null">motto = #{motto,jdbcType=VARCHAR},</if>
+      <if test="qrcode!=null">qrcode = #{qrcode,jdbcType=INTEGER},</if>
+      <if test="studentid!=null">studentid=#{studentid,jdbcType=VARCHAR},</if>
+      <if test="wechat!=null">wechat=#{wechat,jdbcType=VARCHAR},</if>
+      <if test="area!=null"> area=#{area,jdbcType=INTEGER}</if>
     </trim>
-    where id = #{id,jdbcType=INTEGER}
+    where 1=1
+    <if test="id!=null">
+      and  id = #{id,jdbcType=INTEGER}
+    </if>
+    <if test="phone!=null">
+      and phone=#{phone,jdbcType=VARCHAR}
+    </if>
   </update>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select id, email, password, photoid, phone, account, realname, position, state, createtime,
-    companyurl, enname, otherposition, company, summary,motto
+  <select id="selectByPrimaryKey" parameterType="top.tsama.baseapiservicedomain.model.Studentsinfo" resultMap="BaseResultMap">
+    select id, email, photoid, phone, account, realname, position, state, createtime,
+    companyurl, enname, otherposition, company, summary,motto,studentid,wechat,qrcode,area
     from studentsinfo
-    where id = #{id,jdbcType=INTEGER}
+    where 1=1
+    <if test="id!=null">
+      and id = #{id,jdbcType=INTEGER}
+    </if>
+    <if test="realname!=null">
+      and realname=#{realname,jdbcType=VARCHAR}
+    </if>
+    <if test="phone!=null">
+      and phone = #{phone,jdbcType=VARCHAR}
+    </if>
     ORDER BY createtime DESC
   </select>
 
   <select id="selectByAccountEmail" parameterType="top.tsama.baseapiservicedomain.model.Studentsinfo" resultMap="BaseResultMap">
-    select id, email, password, photoid, phone, account, realname, position, state, createtime,
-    companyurl, enname, otherposition, company, summary,motto
-    from studentsinfo
+    select a.id, email, a.photoid, phone, account, realname, position, state, createtime,
+    companyurl, enname, otherposition, company, summary,motto,studentid,wechat,qrcode,area
+    from studentsinfo a
     <where>
-      state=1
       <if test="id != null and id != ''">
         AND  id = #{id,jdbcType=INTEGER}
       </if>
@@ -93,8 +116,8 @@
     </where>
   </select>
   <select id="selectAll" parameterType="top.tsama.baseapiservicedomain.model.StudentsVoinfo" resultType="top.tsama.baseapiservicedomain.model.StudentsVoinfo">
-    select a.id, email, password, photoid, phone, account, realname, position, state, createtime,
-    companyurl, enname, otherposition, company, summary,url ,motto
+    select a.id, email, photoid, phone, account, realname, position, state, createtime,
+    companyurl, enname, otherposition, company, summary,url ,motto,studentid,wechat,qrcode,area
     from studentsinfo a LEFT JOIN sys_file b ON a.photoid=b.id where a.state=1
     <if test="id!=null">
       and a.id=#{id}

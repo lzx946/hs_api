@@ -14,7 +14,14 @@ public interface StudentService {
 
     int insert(Studentsinfo record);
 
-    Studentsinfo selectByPrimaryKey(Integer id);
+    Studentsinfo selectByPrimaryKey(Studentsinfo studentsinfo);
+
+    /**
+     * 忘记密码
+     * @param studentsinfo
+     * @return
+     */
+    boolean forgetpassword(Studentsinfo studentsinfo);
 
     /**
      * 查询学员信息

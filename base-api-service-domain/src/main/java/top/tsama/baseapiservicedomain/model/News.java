@@ -18,6 +18,26 @@ public class News implements Serializable {
 
     private String newsTime;
 
+    private Integer iscommend;
+
+    private String url;
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public Integer getIscommend() {
+        return iscommend;
+    }
+
+    public void setIscommend(Integer iscommend) {
+        this.iscommend = iscommend;
+    }
+
     public String getNewsTime() {
         return newsTime;
     }

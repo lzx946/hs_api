@@ -31,11 +31,11 @@ public class NewController {
      * 获取新闻列表及详情
      * @param request
      * @param response
-     * @param pagination
+     * @param
      * @return
      */
     @RequestMapping("/getNewslist")
-    public String getNewslist(HttpServletRequest request, HttpServletResponse response, Pagination pagination){
+    public String getNewslist(HttpServletRequest request, HttpServletResponse response){
             response.setHeader("Access-Control-Allow-Origin",ActionUtil.CrossDomain);
             String id=request.getParameter("id");
             News news=new News();
@@ -43,16 +43,17 @@ public class NewController {
                 news.setId(Integer.parseInt(id));
             }
             try {
-                List<News> newsList = newsService.selectAll(news, pagination);
-                PageInfo<News> page = new PageInfo<News>(newsList);
+                List<News> newsList = newsService.selectAll(news);
+            //    PageInfo<News> page = new PageInfo<News>(newsList);
                 if (newsList != null) {
                     if(newsList.size()!=0) {
                         for (int i = 0; i < newsList.size(); i++) {
+                            newsList.get(i).setUrl(ActionUtil.ROOTURL+newsList.get(i).getUrl());
                             newsList.get(i).setNewsTime(DateUtils.getFormattedString(newsList.get(i).getCreatetime(),DateUtils.yyyyMMdd));
                         }
                     }
                     log.info("NewController查询新闻列表成功");
-                    return webUtil.resultTotal(webUtil.FLAG_SUCCESS, webUtil.ERROR_CODE_SUCCESS, "查询新闻列表成功", newsList, page.getTotal());
+                    return webUtil.resultTotal(webUtil.FLAG_SUCCESS, webUtil.ERROR_CODE_SUCCESS, "查询新闻列表成功", newsList, 0);
                 }
             }
             catch (Exception e){
@@ -61,5 +62,37 @@ public class NewController {
             }
                 return webUtil.resultTotal(webUtil.FLAG__FAILED, webUtil.ERROR_CODE_ILLEGAL, "查询新闻列表失败", null, 0);
     }
+
+    @RequestMapping("/appgetNewslist")
+    public String appgetNewslist(HttpServletRequest request, HttpServletResponse response){
+        response.setHeader("Access-Control-Allow-Origin",ActionUtil.CrossDomain);
+        String id=request.getParameter("id");
+        News news=new News();
+        if(id!=null&&!"".equals(id)){
+            news.setId(Integer.parseInt(id));
+        }
+        try {
+            List<News> newsList = newsService.selectAll(news);
+        //    PageInfo<News> page = new PageInfo<News>(newsList);
+            if (newsList != null) {
+                if(newsList.size()!=0) {
+                    for (int i = 0; i < newsList.size(); i++) {
+                        newsList.get(i).setUrl(ActionUtil.ROOTURL+newsList.get(i).getUrl());
+                        newsList.get(i).setNewsTime(DateUtils.getFormattedString(newsList.get(i).getCreatetime(),DateUtils.yyyyMMdd));
+                    //   newsList.get(i).setContent(newsList.get(i).getContent().replaceAll("<(?!img)[^>]*>",""));
+                        newsList.get(i).setContent(newsList.get(i).getContent().replaceAll("<(?!img).*?>"  ,""));
+                    }
+                }
+                log.info("NewController查询新闻列表成功");
+                return webUtil.resultTotal(webUtil.FLAG_SUCCESS, webUtil.ERROR_CODE_SUCCESS, "查询新闻列表成功", newsList, 0);
+            }
+        }
+        catch (Exception e){
+            log.error("NewController查询新闻列表失败"+e.getMessage());
+            e.printStackTrace();
+        }
+        return webUtil.resultTotal(webUtil.FLAG__FAILED, webUtil.ERROR_CODE_ILLEGAL, "查询新闻列表失败", null, 0);
+    }
+
 
 }

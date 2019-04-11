@@ -4,7 +4,7 @@ package top.tsama.baseapiservicecommon;
  * Created by wangdaren on 2018/1/21.
  */
 public class Pagination {
-        public final static int PAGE_SHOW_COUNT = 20;
+        public final static int PAGE_SHOW_COUNT = 6;
 
         private int pageNum = 1;
 

@@ -12,6 +12,16 @@ public class Studentsinfo implements Serializable {
 
     private Integer photoid;
 
+    private String codeflagname;
+
+    public String getCodeflagname() {
+        return codeflagname;
+    }
+
+    public void setCodeflagname(String codeflagname) {
+        this.codeflagname = codeflagname;
+    }
+
     private String phone;
 
     private String account;
@@ -35,6 +45,46 @@ public class Studentsinfo implements Serializable {
     private String summary;
 
     private String motto;
+
+    private Integer qrcode;
+
+    private String wechat;
+
+    private String studentid;
+
+    private Integer area;
+
+    public Integer getArea() {
+        return area;
+    }
+
+    public void setArea(Integer area) {
+        this.area = area;
+    }
+
+    public Integer getQrcode() {
+        return qrcode;
+    }
+
+    public void setQrcode(Integer qrcode) {
+        this.qrcode = qrcode;
+    }
+
+    public String getWechat() {
+        return wechat;
+    }
+
+    public void setWechat(String wechat) {
+        this.wechat = wechat;
+    }
+
+    public String getStudentid() {
+        return studentid;
+    }
+
+    public void setStudentid(String studentid) {
+        this.studentid = studentid;
+    }
 
     public String getMotto() {
         return motto;

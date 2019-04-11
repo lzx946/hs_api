@@ -23,7 +23,7 @@
         <sqlMapGenerator targetPackage="top.tsama.baseapiservicedao.mapper" targetProject="${generator.mybatis.location.root.path}\base\base-api-service-dao\src\main\java"/>
         <javaClientGenerator type="XMLMAPPER" targetPackage="top.tsama.baseapiservicedao.mapper" targetProject="${generator.mybatis.location.root.path}\base\base-api-service-dao\src\main\java"/>
         <!--set auto generator's tables-->
-        <table tableName="%">
+        <table tableName="backgroudpicture" domainObjectName="Backgroudinfo">
             <generatedKey column="id" sqlStatement="MySql"/>
         </table>
     </context>

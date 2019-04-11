@@ -9,6 +9,16 @@ public class Course {
 
     private String room;
 
+    private String codeflagname;
+
+    public String getCodeflagname() {
+        return codeflagname;
+    }
+
+    public void setCodeflagname(String codeflagname) {
+        this.codeflagname = codeflagname;
+    }
+
     private Integer teacherid;
 
     private Integer state;

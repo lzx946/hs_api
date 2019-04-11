@@ -43,15 +43,24 @@ public class LoginRegisterServiceImpl implements LoginRegisterService {
             int flag = 0;
             record.setPhotoid(1);
             record.setCreatetime(new Date());
-            record.setState(0);
+            record.setState(1);
+            if(record.getArea()==null) {
+                record.setArea(0);
+                log.info("222");
+            }
+            log.info("333");
             flag = studentsinfoMapper.insert(record);
             if (flag != 0) {
+                log.info("444");
                 return true;
             }
+            log.info("555");
         } catch (Exception e) {
             log.error("注册失败");
+            log.info("666");
             e.printStackTrace();
         }
+        log.info("777");
         return false;
     }
 
